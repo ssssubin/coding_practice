@@ -26,17 +26,16 @@ public class Main  {
             System.out.println(count);
         }
     }
-    static int counting(int[] arr, int value){
-        int start = 0, end=arr.length, cnt=0;
-        while(start<end){
-            if(arr[start]<value){
-                cnt++;
-                start++;
-            }
-            else{
-                start=end;
+    static int counting(int[] arr, int value) {
+        int start = 0, end = arr.length - 1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (arr[mid] < value) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
             }
         }
-        return cnt;
+        return start;
     }
 }
