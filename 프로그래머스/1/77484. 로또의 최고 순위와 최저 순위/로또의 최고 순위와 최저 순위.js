@@ -8,8 +8,7 @@ function solution(lottos, win_nums) {
     });
     
     const countList = [];
-    countList.push(matchCount);
-    countList.push(matchCount + zeroCount);
+    countList.push(matchCount, matchCount + zeroCount);
     
     const rank = [];
     for(let i = 0; i < 2; i++){
